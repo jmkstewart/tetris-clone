@@ -28,6 +28,7 @@ class Button(Font):
 
     def Event(self, event):
         if event.type == pygame.MOUSEBUTTONUP and event.button == LEFT:
+            self.SetTextWithColour(self.button_text, (0, 80, 153))
             if self.background_rect.collidepoint(event.pos):
                 self.NotifyListeners()
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == LEFT:
